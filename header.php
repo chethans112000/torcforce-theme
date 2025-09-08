@@ -14,8 +14,8 @@
                 <!-- Logo -->
                 <div class="logo">
                     <div class="logo-text">
-                        ENERPAC
-                        <span class="logo-subtitle">TOOL GROUP</span>
+                        Torcforce
+                        <!-- <span class="logo-subtitle">TOOL GROUP</span> -->
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                             <polyline points="6,9 12,15 18,9"></polyline>
                         </svg>
                     </a>
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#about-us" class="nav-link" id="aboutUsLink">About Us</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -73,7 +73,36 @@
                     <a href="#" class="mobile-nav-link">Investors</a>
                     <a href="#" class="mobile-nav-link">Careers</a>
                     <a href="#" class="mobile-nav-link">Media</a>
-                    <a href="#" class="mobile-nav-link">Contact</a>
+                    <a href="#about-us" class="mobile-nav-link" id="aboutUsLinkMobile">About Us</a>
+    <!-- Smooth scroll script for About Us link -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function smoothScrollToAboutUs(e, selector) {
+            const aboutSection = document.querySelector(selector);
+            if (aboutSection) {
+                e.preventDefault();
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+                // Optionally close mobile menu
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileMenu && selector === '#about-us') {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        }
+        var aboutUsLink = document.getElementById('aboutUsLink');
+        if (aboutUsLink) {
+            aboutUsLink.addEventListener('click', function(e) {
+                smoothScrollToAboutUs(e, '#about-us');
+            });
+        }
+        var aboutUsLinkMobile = document.getElementById('aboutUsLinkMobile');
+        if (aboutUsLinkMobile) {
+            aboutUsLinkMobile.addEventListener('click', function(e) {
+                smoothScrollToAboutUs(e, '#about-us');
+            });
+        }
+    });
+    </script>
                 </nav>
             </div>
         </div>
