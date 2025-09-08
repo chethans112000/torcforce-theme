@@ -14,40 +14,33 @@
                 <!-- Logo -->
                 <div class="logo">
                     <div class="logo-text">
-                        ENERPAC
-                        <span class="logo-subtitle">TOOL GROUP</span>
+                        Torcforce
+                        <!-- <span class="logo-subtitle">TOOL GROUP</span> -->
                     </div>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <nav class="nav-desktop">
                     <a href="#" class="nav-link">
-                        Company
-                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
+                        Home
                     </a>
-                    <a href="#" class="nav-link">Brands</a>
+                    <a href="#" class="nav-link">About Us</a>
                     <a href="#" class="nav-link">
-                        Solutions
-                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
-                    </a>
-                    <a href="#" class="nav-link">Investors</a>
-                    <a href="#" class="nav-link">
-                        Careers
+                        Products
                         <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="6,9 12,15 18,9"></polyline>
                         </svg>
                     </a>
                     <a href="#" class="nav-link">
-                        Media
+                        Industries
                         <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="6,9 12,15 18,9"></polyline>
                         </svg>
                     </a>
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link">
+                        Contact
+                    </a>
+                    <a href="#" class="nav-link">Gallery</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -67,13 +60,12 @@
             <!-- Mobile Menu -->
             <div class="mobile-menu hidden" id="mobileMenu">
                 <nav class="mobile-nav">
-                    <a href="#" class="mobile-nav-link">Company</a>
-                    <a href="#" class="mobile-nav-link">Brands</a>
-                    <a href="#" class="mobile-nav-link">Solutions</a>
-                    <a href="#" class="mobile-nav-link">Investors</a>
-                    <a href="#" class="mobile-nav-link">Careers</a>
-                    <a href="#" class="mobile-nav-link">Media</a>
+                    <a href="#" class="mobile-nav-link">Home</a>
+                    <a href="#" class="mobile-nav-link">About Us</a>
+                    <a href="#" class="mobile-nav-link">Products</a>
+                    <a href="#" class="mobile-nav-link">Industries</a>
                     <a href="#" class="mobile-nav-link">Contact</a>
+                    <a href="#" class="mobile-nav-link">Gallery</a>
                 </nav>
             </div>
         </div>
