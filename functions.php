@@ -19,6 +19,7 @@ function tacforce_scripts() {
     wp_enqueue_script('tacforce-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), null, true);
     wp_enqueue_script('tacforce-mobile-menu', get_template_directory_uri() . '/assets/js/mobile-menu.js', array(), null, true);
     wp_enqueue_script('tacforce-gallery-filter', get_template_directory_uri() . '/assets/js/gallery-filter.js', array(), null, true);
+    wp_enqueue_script('tacforce-hero-slider', get_template_directory_uri() . '/assets/js/hero-slider.js', array(), null, true);
 }
 
 add_action('wp_enqueue_scripts', 'tacforce_scripts');
