@@ -1,6 +1,6 @@
 <?php
 ?>
-<section class="hero">
+<section id="hero" class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1 class="hero-title">Torcforce®</h1>

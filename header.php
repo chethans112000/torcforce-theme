@@ -21,26 +21,26 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="nav-desktop">
-                    <a href="#" class="nav-link">
+                    <a href="#hero" class="nav-link">
                         Home
                     </a>
-                    <a href="#" class="nav-link">About Us</a>
-                    <a href="#" class="nav-link">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <a href="#products" class="nav-link">
                         Products
                         <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="6,9 12,15 18,9"></polyline>
                         </svg>
                     </a>
-                    <a href="#" class="nav-link">
+                    <a href="#industries" class="nav-link">
                         Industries
                         <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="6,9 12,15 18,9"></polyline>
                         </svg>
                     </a>
-                    <a href="#" class="nav-link">
+                    <a href="#contact" class="nav-link">
                         Contact
                     </a>
-                    <a href="#" class="nav-link">Gallery</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -60,12 +60,12 @@
             <!-- Mobile Menu -->
             <div class="mobile-menu hidden" id="mobileMenu">
                 <nav class="mobile-nav">
-                    <a href="#" class="mobile-nav-link">Home</a>
-                    <a href="#" class="mobile-nav-link">About Us</a>
-                    <a href="#" class="mobile-nav-link">Products</a>
-                    <a href="#" class="mobile-nav-link">Industries</a>
-                    <a href="#" class="mobile-nav-link">Contact</a>
-                    <a href="#" class="mobile-nav-link">Gallery</a>
+                    <a href="#hero" class="mobile-nav-link">Home</a>
+                    <a href="#about-us" class="mobile-nav-link">About Us</a>
+                    <a href="#products" class="mobile-nav-link">Products</a>
+                    <a href="#industries" class="mobile-nav-link">Industries</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                    <a href="#gallery" class="mobile-nav-link">Gallery</a>
                 </nav>
             </div>
         </div>
