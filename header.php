@@ -37,10 +37,11 @@
                             <polyline points="6,9 12,15 18,9"></polyline>
                         </svg>
                     </a>
+                                        <a href="#gallery" class="nav-link">Gallery</a>
                     <a href="#contact" class="nav-link">
                         Contact
                     </a>
-                    <a href="#gallery" class="nav-link">Gallery</a>
+
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -64,8 +65,8 @@
                     <a href="#about-us" class="mobile-nav-link">About Us</a>
                     <a href="#products" class="mobile-nav-link">Products</a>
                     <a href="#industries" class="mobile-nav-link">Industries</a>
-                    <a href="#contact" class="mobile-nav-link">Contact</a>
                     <a href="#gallery" class="mobile-nav-link">Gallery</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
                 </nav>
             </div>
         </div>

@@ -15,45 +15,14 @@
 
                 <!-- Links Sections -->
                 <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
+                    <h4 class="footer-title">Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Leadership</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">News & Media</a></li>
-                        <li><a href="#">Investor Relations</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Brands</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Enerpac</a></li>
-                        <li><a href="#">hydratight</a></li>
-                        <li><a href="#">Simplex</a></li>
-                        <li><a href="#">BEGA Special Tools</a></li>
-                        <li><a href="#">Larzep</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Industrial Tools</a></li>
-                        <li><a href="#">Bolting Solutions</a></li>
-                        <li><a href="#">Lifting & Positioning</a></li>
-                        <li><a href="#">Maintenance Tools</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Service & Repair</a></li>
-                        <li><a href="#">Training</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#industries">Industries</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
