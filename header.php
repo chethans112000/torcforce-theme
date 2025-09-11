@@ -25,23 +25,58 @@
                         Home
                     </a>
                     <a href="#about-us" class="nav-link">About Us</a>
-                    <a href="#products" class="nav-link">
-                        Products
-                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
-                    </a>
-                    <a href="#industries" class="nav-link">
-                        Industries
-                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
-                    </a>
-                                        <a href="#gallery" class="nav-link">Gallery</a>
+                    <div class="nav-dropdown">
+                        <a href="#products" class="nav-link">
+                            Products
+                            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <h4 class="dropdown-title">Hydraulic Tools</h4>
+                                <a href="#" class="dropdown-link">Torque Wrenches</a>
+                                <a href="#" class="dropdown-link">Pump Systems</a>
+                                <a href="#" class="dropdown-link">Cylinders</a>
+                                <a href="#" class="dropdown-link">Accessories</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4 class="dropdown-title">Bolting Solutions</h4>
+                                <a href="#" class="dropdown-link">Tensioning Tools</a>
+                                <a href="#" class="dropdown-link">Flange Tools</a>
+                                <a href="#" class="dropdown-link">Nut Runners</a>
+                                <a href="#" class="dropdown-link">Custom Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#industries" class="nav-link">
+                            Industries
+                            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <h4 class="dropdown-title">Energy</h4>
+                                <a href="#" class="dropdown-link">Oil & Gas</a>
+                                <a href="#" class="dropdown-link">Renewable Energy</a>
+                                <a href="#" class="dropdown-link">Nuclear Power</a>
+                                <a href="#" class="dropdown-link">Petrochemical</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4 class="dropdown-title">Infrastructure</h4>
+                                <a href="#" class="dropdown-link">Construction</a>
+                                <a href="#" class="dropdown-link">Mining</a>
+                                <a href="#" class="dropdown-link">Transportation</a>
+                                <a href="#" class="dropdown-link">Manufacturing</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#gallery" class="nav-link">Gallery</a>
                     <a href="#contact" class="nav-link">
                         Contact
                     </a>
-
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -63,8 +98,54 @@
                 <nav class="mobile-nav">
                     <a href="#hero" class="mobile-nav-link">Home</a>
                     <a href="#about-us" class="mobile-nav-link">About Us</a>
-                    <a href="#products" class="mobile-nav-link">Products</a>
-                    <a href="#industries" class="mobile-nav-link">Industries</a>
+                    <div class="mobile-dropdown">
+                        <a href="#products" class="mobile-nav-link mobile-dropdown-toggle">
+                            Products
+                            <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="mobile-dropdown-content">
+                            <div class="mobile-dropdown-section">
+                                <h5>Hydraulic Tools</h5>
+                                <a href="#" class="mobile-sub-link">Torque Wrenches</a>
+                                <a href="#" class="mobile-sub-link">Pump Systems</a>
+                                <a href="#" class="mobile-sub-link">Cylinders</a>
+                                <a href="#" class="mobile-sub-link">Accessories</a>
+                            </div>
+                            <div class="mobile-dropdown-section">
+                                <h5>Bolting Solutions</h5>
+                                <a href="#" class="mobile-sub-link">Tensioning Tools</a>
+                                <a href="#" class="mobile-sub-link">Flange Tools</a>
+                                <a href="#" class="mobile-sub-link">Nut Runners</a>
+                                <a href="#" class="mobile-sub-link">Custom Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="#industries" class="mobile-nav-link mobile-dropdown-toggle">
+                            Industries
+                            <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="mobile-dropdown-content">
+                            <div class="mobile-dropdown-section">
+                                <h5>Energy</h5>
+                                <a href="#" class="mobile-sub-link">Oil & Gas</a>
+                                <a href="#" class="mobile-sub-link">Renewable Energy</a>
+                                <a href="#" class="mobile-sub-link">Nuclear Power</a>
+                                <a href="#" class="mobile-sub-link">Petrochemical</a>
+                            </div>
+                            <div class="mobile-dropdown-section">
+                                <h5>Infrastructure</h5>
+                                <a href="#" class="mobile-sub-link">Construction</a>
+                                <a href="#" class="mobile-sub-link">Mining</a>
+                                <a href="#" class="mobile-sub-link">Transportation</a>
+                                <a href="#" class="mobile-sub-link">Manufacturing</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#gallery" class="mobile-nav-link">Gallery</a>
                     <a href="#contact" class="mobile-nav-link">Contact</a>
                 </nav>

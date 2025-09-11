@@ -8,17 +8,10 @@
             <p class="section-subtitle">See our products and solutions in action across various industries</p>
         </div>
         
-        <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="products">Products</button>
-            <button class="filter-btn" data-filter="applications">Applications</button>
-            <button class="filter-btn" data-filter="facilities">Facilities</button>
-        </div>
-
         <div class="gallery-grid">
             <!-- Gallery Item 1 -->
-            <div class="gallery-item" data-category="products">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Hydraulic Torque Wrench', 'High-precision bolting tool')">
                     <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hydraulic Torque Wrench">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -30,8 +23,8 @@
             </div>
 
             <!-- Gallery Item 2 -->
-            <div class="gallery-item" data-category="applications">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Industrial Application', 'Oil & Gas facility installation')">
                     <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Industrial Application">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -43,8 +36,8 @@
             </div>
 
             <!-- Gallery Item 3 -->
-            <div class="gallery-item" data-category="products">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Hydraulic Pump System', 'High-pressure pumping solution')">
                     <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hydraulic Pump System">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -56,8 +49,8 @@
             </div>
 
             <!-- Gallery Item 4 -->
-            <div class="gallery-item" data-category="facilities">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Manufacturing Facility', 'State-of-the-art production line')">
                     <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Manufacturing Facility">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -69,8 +62,8 @@
             </div>
 
             <!-- Gallery Item 5 -->
-            <div class="gallery-item" data-category="applications">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Wind Turbine Installation', 'Renewable energy project')">
                     <img src="https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wind Turbine Installation">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -82,8 +75,8 @@
             </div>
 
             <!-- Gallery Item 6 -->
-            <div class="gallery-item" data-category="products">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Bolt Tensioning Tool', 'Precision tensioning equipment')">
                     <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bolt Tensioning Tool">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -95,8 +88,8 @@
             </div>
 
             <!-- Gallery Item 7 -->
-            <div class="gallery-item" data-category="applications">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Pipeline Construction', 'Critical infrastructure project')">
                     <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pipeline Construction">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -108,8 +101,8 @@
             </div>
 
             <!-- Gallery Item 8 -->
-            <div class="gallery-item" data-category="facilities">
-                <div class="gallery-image">
+            <div class="gallery-item">
+                <div class="gallery-image" onclick="openModal('https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1200', 'Quality Control Lab', 'Testing and certification facility')">
                     <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Quality Control Lab">
                     <div class="gallery-overlay">
                         <div class="gallery-content">
@@ -117,6 +110,18 @@
                             <p>Testing and certification facility</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Image Display -->
+        <div id="imageModal" class="image-modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" class="modal-image" src="" alt="">
+                <div class="modal-info">
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalDescription"></p>
                 </div>
             </div>
         </div>
