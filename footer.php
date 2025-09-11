@@ -4,9 +4,8 @@
             <div class="footer-content">
                 <!-- Logo Section -->
                 <div class="footer-brand">
-                    <div class="footer-logo">
-                        ENERPAC
-                        <span class="footer-logo-subtitle">TOOL GROUP</span>
+                    <div class="footer-logo-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/torcforce-logo.png" alt="Torcforce Logo" class="footer-logo-image">
                     </div>
                     <p class="footer-description">
                         Leading manufacturer of high-pressure hydraulic tools, controlled bolting equipment, and other specialized tools.
@@ -31,7 +30,7 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <div class="copyright">
-                        © 2025 Enerpac Tool Group. All rights reserved.
+                        © 2025 Torcforce Tool Group. All rights reserved.
                     </div>
                     <div class="footer-bottom-links">
                         <a href="#">Privacy Policy</a>

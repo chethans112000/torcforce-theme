@@ -6,6 +6,7 @@ function tacforce_setup() {
     // Register navigation menus
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'tacforce'),
+        'mobile' => __('Mobile Menu', 'tacforce'),
     ));
 }
 
@@ -89,7 +90,113 @@ function torcforce_register_products() {
 }
 add_action('init', 'torcforce_register_products');
 
+// Custom Walker for Navigation Menu
+class Torcforce_Walker_Nav_Menu extends Walker_Nav_Menu {
+    
+    // Start Level - output a wrapper for sub-menus
+    function start_lvl(&$output, $depth = 0, $args = null) {
+        if ($depth == 0) {
+            $output .= '<div class="dropdown-menu"><div class="dropdown-columns">';
+        } elseif ($depth == 1) {
+            $output .= '<div class="dropdown-column">';
+        }
+    }
 
+    // End Level - close wrapper
+    function end_lvl(&$output, $depth = 0, $args = null) {
+        if ($depth == 0) {
+            $output .= '</div></div>';
+        } elseif ($depth == 1) {
+            $output .= '</div>';
+        }
+    }
+
+    // Start Element - output individual menu items
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $has_children = in_array('menu-item-has-children', $classes);
+        
+        if ($depth == 0) {
+            if ($has_children) {
+                $output .= '<div class="nav-dropdown">';
+                $output .= '<a href="' . esc_attr($item->url) . '" class="nav-link">';
+                $output .= esc_html($item->title);
+                $output .= '<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>';
+                $output .= '</a>';
+            } else {
+                $output .= '<a href="' . esc_attr($item->url) . '" class="nav-link">';
+                $output .= esc_html($item->title);
+                $output .= '</a>';
+            }
+        } elseif ($depth == 1) {
+            // Make second level items as clickable links with dropdown-title styling
+            $output .= '<a href="' . esc_attr($item->url) . '" class="dropdown-title">' . esc_html($item->title) . '</a>';
+        } elseif ($depth == 2) {
+            $output .= '<a href="' . esc_attr($item->url) . '" class="dropdown-link">' . esc_html($item->title) . '</a>';
+        }
+    }
+
+    // End Element
+    function end_el(&$output, $item, $depth = 0, $args = null) {
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $has_children = in_array('menu-item-has-children', $classes);
+        
+        if ($depth == 0 && $has_children) {
+            $output .= '</div>'; // Close nav-dropdown
+        }
+    }
+}
+
+// Mobile Menu Walker
+class Torcforce_Mobile_Walker_Nav_Menu extends Walker_Nav_Menu {
+    
+    function start_lvl(&$output, $depth = 0, $args = null) {
+        if ($depth == 0) {
+            $output .= '<div class="mobile-dropdown-content">';
+        } elseif ($depth == 1) {
+            $output .= '<div class="mobile-dropdown-section">';
+        }
+    }
+
+    function end_lvl(&$output, $depth = 0, $args = null) {
+        if ($depth == 0) {
+            $output .= '</div>';
+        } elseif ($depth == 1) {
+            $output .= '</div>';
+        }
+    }
+
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $has_children = in_array('menu-item-has-children', $classes);
+        
+        if ($depth == 0) {
+            if ($has_children) {
+                $output .= '<div class="mobile-dropdown">';
+                $output .= '<a href="' . esc_attr($item->url) . '" class="mobile-nav-link mobile-dropdown-toggle">';
+                $output .= esc_html($item->title);
+                $output .= '<svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>';
+                $output .= '</a>';
+            } else {
+                $output .= '<a href="' . esc_attr($item->url) . '" class="mobile-nav-link">' . esc_html($item->title) . '</a>';
+            }
+        } elseif ($depth == 1) {
+            // Make second level items as clickable links with h5 styling
+            $output .= '<a href="' . esc_attr($item->url) . '" class="mobile-section-title">' . esc_html($item->title) . '</a>';
+        } elseif ($depth == 2) {
+            $output .= '<a href="' . esc_attr($item->url) . '" class="mobile-sub-link">' . esc_html($item->title) . '</a>';
+        }
+    }
+
+    function end_el(&$output, $item, $depth = 0, $args = null) {
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $has_children = in_array('menu-item-has-children', $classes);
+        
+        if ($depth == 0 && $has_children) {
+            $output .= '</div>'; // Close mobile-dropdown
+        }
+    }
+}
 
 ?>
 
