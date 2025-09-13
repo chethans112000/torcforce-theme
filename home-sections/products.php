@@ -1,4 +1,10 @@
 <?php
+// Query parent categories of product_category taxonomy
+$parent_categories = get_terms([
+    'taxonomy'   => 'product_category',
+    'hide_empty' => false,
+    'parent'     => 0, // Only fetch parent categories
+]);
 ?>
 <!-- Products Section -->
 <section id="products" class="products-section">
@@ -9,65 +15,33 @@
         </div>
         
         <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hydraulic Torque Wrenches">
-                    <div class="product-overlay">
-                        <a href="#" class="product-link">View Details</a>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Hydraulic Torque Wrenches</h3>
-                    <p class="product-description">High-precision hydraulic torque wrenches for critical bolting applications in demanding industrial environments.</p>
-                </div>
-            </div>
+            <?php foreach ($parent_categories as $category): ?>
+                <?php
+                $image_id = get_term_meta($category->term_id, 'image', true);
+                $image_url = wp_get_attachment_url($image_id);
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bolt Tensioning Systems">
-                    <div class="product-overlay">
-                        <a href="#" class="product-link">View Details</a>
+                // Use external placeholder if no image is set
+                if (empty($image_url)) {
+                    $image_url = 'https://placehold.co/300x180?text=' . urlencode($category->name);
+                }
+                ?>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($category->name); ?>">
+                        <div class="product-overlay">
+                            <a href="<?php echo esc_url(get_term_link($category)); ?>" class="product-link">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name"><?php echo esc_html($category->name); ?></h3>
+                        <p class="product-description"><?php echo esc_html($category->description); ?></p>
                     </div>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Bolt Tensioning Systems</h3>
-                    <p class="product-description">Advanced bolt tensioning technology for uniform load distribution and superior joint integrity.</p>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hydraulic Pumps">
-                    <div class="product-overlay">
-                        <a href="#" class="product-link">View Details</a>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Hydraulic Pumps</h3>
-                    <p class="product-description">High-pressure hydraulic pumps designed for consistent performance and maximum efficiency.</p>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Specialty Tools">
-                    <div class="product-overlay">
-                        <a href="#" class="product-link">View Details</a>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Specialty Tools</h3>
-                    <p class="product-description">Custom-engineered tools and accessories for specialized industrial applications and unique requirements.</p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
 
         <div class="products-cta">
-            <a href="#contact" class="cta-button">Request Product Information</a>
+            <a href="<?php echo esc_url(get_post_type_archive_link('products')); ?>" class="cta-button">View All Products</a>
         </div>
     </div>
 </section>

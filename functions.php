@@ -115,6 +115,7 @@ class Torcforce_Walker_Nav_Menu extends Walker_Nav_Menu {
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $has_children = in_array('menu-item-has-children', $classes);
+        $output .= '<div class="dropdown-column">';
         
         if ($depth == 0) {
             if ($has_children) {
@@ -140,7 +141,8 @@ class Torcforce_Walker_Nav_Menu extends Walker_Nav_Menu {
     function end_el(&$output, $item, $depth = 0, $args = null) {
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $has_children = in_array('menu-item-has-children', $classes);
-        
+        $output .= '</div>';
+
         if ($depth == 0 && $has_children) {
             $output .= '</div>'; // Close nav-dropdown
         }

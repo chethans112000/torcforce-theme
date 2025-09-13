@@ -200,7 +200,7 @@ body {
 
 /* Desktop Dropdown Styles */
 .nav-dropdown {
-    position: relative;
+    /* position: relative; */
 }
 
 /* WordPress Menu Classes */
@@ -244,24 +244,30 @@ body {
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 100%; /* directly below parent */
+    left:50%;
+    transform: translateX(-50%) translateY(-15px) !important; /* center align + initial slide up */
     background-color: #1a1a1a;
     border: 1px solid #333;
     border-radius: 0.5rem;
-    min-width: 400px;
+    min-width: 1200px;
     padding: 1.5rem;
     display: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     z-index: 100;
     opacity: 0;
-    transform: translateY(-10px);
     transition: all 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+    .dropdown-menu {
+        min-width: 1024px;
+    }
 }
 
 .dropdown-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
@@ -342,6 +348,7 @@ body {
     font-size: 0.875rem;
     padding: 0.75rem 0;
     transition: color 0.3s ease;
+    display: block;
 }
 
 .mobile-nav-link:hover {
@@ -403,13 +410,14 @@ body {
     transition: max-height 0.3s ease;
     background-color: rgba(255, 215, 0, 0.05);
     border-left: 2px solid #ffd700;
-    margin: 0.5rem 0;
+    margin:0;
     padding: 0 1rem;
 }
 
 .mobile-dropdown.active .mobile-dropdown-content {
     max-height: 500px;
     padding: 1rem;
+    overflow: auto;
 }
 
 .mobile-dropdown-section {
@@ -1142,6 +1150,8 @@ body {
     border: 2px solid #ffd700;
     border-radius: 0.25rem;
     transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .product-link:hover {
@@ -1150,7 +1160,7 @@ body {
 }
 
 .product-info {
-    padding: 1.5rem;
+    padding: 10px 10px 10px 10px;
 }
 
 .product-name {
