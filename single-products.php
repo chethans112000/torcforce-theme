@@ -37,7 +37,11 @@ get_header(); ?>
                                 <div class="product-image">
                                     <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
                                 </div>
-                            <?php endif; ?>
+                          <?php else : ?>
+                                   <div class="product-image">
+                                        <img src="https://via.placeholder.com/400x300?text=No+Image" alt="No Image" class="product-thumbnail img-responsive">
+                                </div>
+                                <?php endif; ?>
                         <div class="product-contact">
                             <h3>Interested in this product?</h3>
                             <p>Contact us for more information, pricing, or to request a quote.</p>
